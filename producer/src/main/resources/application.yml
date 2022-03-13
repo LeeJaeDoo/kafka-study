@@ -1,0 +1,12 @@
+server:
+  port: 8460
+
+spring:
+  application:
+    name: producer
+  profiles:
+    active: local
+  kafka:
+    bootstrap-servers: 54.180.89.155:9290
+    producer:
+      retries: 1
