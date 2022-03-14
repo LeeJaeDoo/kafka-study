@@ -8,5 +8,5 @@ spring:
     active: local
   kafka:
     bootstrap-servers: 54.180.89.155:9290
-    producer:
-      retries: 1
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common.serialization.StringSerializer
