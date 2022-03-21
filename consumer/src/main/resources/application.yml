@@ -8,7 +8,7 @@ spring:
     active: local
   kafka:
     consumer:
-      bootstrap-servers: 54.180.89.155:9290
+      bootstrap-servers: 3.36.95.196:9290
       group-id: foo
       auto-offset-reset: earliest # latest, earliest, none
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

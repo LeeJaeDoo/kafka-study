@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="3.36.95.196" id="77966903-1cc8-4605-973e-b01f105753f7" keyPath="$USER_HOME$/Downloads/kafka-test.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+    </configs>
+  </component>
+</project>
