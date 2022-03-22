@@ -33,6 +33,10 @@ subprojects {
         testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
         compile "org.springframework.kafka:spring-kafka:2.8.3"
         implementation 'org.springframework.boot:spring-boot-starter-web'
+        compile "org.hibernate:hibernate-core"
+        compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+        compile "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5"
+        compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8"
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }
