@@ -9,7 +9,11 @@ spring:
   kafka:
     consumer:
       bootstrap-servers: 3.36.95.196:9092
-      group-id: foo
       auto-offset-reset: earliest # latest, earliest, none
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+kafka:
+  group-id:
+    test1: test1
+    test2: test2
