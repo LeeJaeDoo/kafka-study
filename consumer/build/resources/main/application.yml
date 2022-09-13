@@ -1,0 +1,15 @@
+server:
+  port: 8461
+
+spring:
+  application:
+    name: producer
+  profiles:
+    active: local
+  kafka:
+    consumer:
+      bootstrap-servers: 3.36.95.196:9092
+      group-id: foo
+      auto-offset-reset: earliest # latest, earliest, none
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

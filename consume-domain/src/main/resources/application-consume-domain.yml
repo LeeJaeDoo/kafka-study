@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: consume-domain
+  config:
+    use-legacy-processing: true
+  datasource:
+    consume-domain:
+      read:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/kafka-study?autoReconnect=true&useSSL=false
+        username: root
+        password: a90a1027a
+        readOnly: true
+        connection-timeout: 20000
+        max-lifetime: 110000
+        maximumPoolSize: 20
+        poolName: read
+      write:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/kafka-study?autoReconnect=true&useSSL=false
+        username: root
+        password: a90a1027a
+        readOnly: true
+        connection-timeout: 20000
+        max-lifetime: 110000
+        maximumPoolSize: 20
+        poolName: read

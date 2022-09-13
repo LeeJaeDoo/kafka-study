@@ -1,0 +1,13 @@
+server:
+  port: 8460
+
+spring:
+  application:
+    name: producer
+  profiles:
+    active: local
+  kafka:
+    producer:
+      bootstrap-servers: 3.36.95.196:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
