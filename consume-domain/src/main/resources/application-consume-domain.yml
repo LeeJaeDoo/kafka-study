@@ -24,4 +24,19 @@ spring:
         connection-timeout: 20000
         max-lifetime: 110000
         maximumPoolSize: 20
-        poolName: read
+        poolName: write
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      physical_naming_strategy: com.jd.infrastructure.CustomPhysicalNamingStrategy
+      default_batch_fetch_size: 1000
+      query:
+        fail_on_pagination_over_collection_fetch: true
+      use_sql_comments: true
+      format_sql: true
+      show_sql: true
+      dialect: org.hibernate.dialect.MySQL55Dialect
+      hbm2ddl:
+        auto: none
