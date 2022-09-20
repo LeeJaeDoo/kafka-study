@@ -1,0 +1,23 @@
+version: 0.0
+os: linux
+files:
+  - sources: /
+    destination: #{DEPLOY_TMP}
+permissions:
+  - object: #{USER_HOME}
+    owner: #{USER}
+    group: #{GRUOP}
+    mode: 775
+hooks:
+  BeforeInstall:
+    - location: BeforeInstall.sh
+      timeout: 60
+  AfterInstall:
+    - location: AfterInstall.sh
+      timeout: 60
+  ApplicationStart:
+    - location: ApplicationStart.sh
+      timeout: 60
+  ValidateService:
+    - location: ValidateService.sh
+      timeout: 60

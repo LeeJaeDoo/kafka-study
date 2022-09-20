@@ -1,0 +1,17 @@
+[Unit]
+Description=${PROJECT_NAME}
+After=network.target
+
+[Service]
+ExecStart=${JAVA_CMD}
+User=${USER}
+Group=${GROUP}
+LimitNOFILE=65535
+LimitNPROC=65535
+SuccessExitStatus=143
+Restart=on-failure
+Nice=-5
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
