@@ -1,7 +1,6 @@
 package com.jd.config;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.jd.EventMesssage;
+import com.jd.EventMessage;
 import com.jd.domain.entity.ConsumerIds;
 import com.jd.domain.entity.IdempotenceConsumeLog;
 import com.jd.domain.repository.IdempotenceConsumeLogRepository;
@@ -36,7 +35,7 @@ public class IdempotenceConsumeHandler {
     public void idempotenceConsumeHandler(ProceedingJoinPoint joinPoint) throws Throwable {
         Object[] args = joinPoint.getArgs();
         String groupId = (String) args[0];
-        EventMesssage messsage = JacksonUtils.toModel((String) args[1], EventMesssage.class);
+        EventMessage messsage = JacksonUtils.toModel((String) args[1], EventMessage.class);
         Acknowledgment acknowledgment = (Acknowledgment) args[2];
 
 
