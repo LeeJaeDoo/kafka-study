@@ -9,9 +9,16 @@ repositories {
 
 dependencies {
     implementation project(':common')
+    implementation project(':consume-domain')
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // mandatory dependencies for using Spock
+    implementation "org.codehaus.groovy:groovy:3.0.8"
+    testImplementation platform("org.spockframework:spock-bom:2.0-groovy-3.0")
+    testImplementation('org.spockframework:spock-spring:2.0-M3-groovy-3.0')
+    testImplementation "org.spockframework:spock-core"
 }
 
 test {
